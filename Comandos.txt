@@ -1,0 +1,12 @@
+#Descargar imagen
+docker pull mysql
+
+#Crear contenedor
+docker run -d -p 33062:3306 --name mysql-db2 -e MYSQL_ROOT_PASSWORD=secret mysql
+
+#Abrir mysql en consola
+docker exec -it mysql-db2 mysql -p
+
+Referencias
+https://www.youtube.com/watch?v=F0sB22yF1cY
+https://www.projectpro.io/recipes/connect-mysql-python-and-import-csv-file-into-mysql-and-create-table
